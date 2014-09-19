@@ -254,11 +254,11 @@
 }
 
 // Transitions
-@mixin ctb-transition($transition) {
-  -webkit-transition: $transition;
-     -moz-transition: $transition;
-       -o-transition: $transition;
-          transition: $transition;
+@mixin ctb-transition($transitions...) {
+  -webkit-transition: $transitions;
+     -moz-transition: $transitions;
+       -o-transition: $transitions;
+          transition: $transitions;
 }
 @mixin ctb-transition-delay($transition-delay) {
   -webkit-transition-delay: $transition-delay;
@@ -382,8 +382,8 @@
 
 // Opacity
 @mixin ctb-opacity($opacity) {
-  opacity: $opacity / 100;
-  filter: alpha(opacity=($opacity));
+  opacity: $opacity;
+  filter: alpha(opacity=($opacity * 100));
 }
 
 

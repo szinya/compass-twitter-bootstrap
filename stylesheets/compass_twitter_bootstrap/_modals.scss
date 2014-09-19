@@ -17,7 +17,7 @@
 
 .modal-backdrop,
 .modal-backdrop.fade.in {
-  @include ctb-opacity(80);
+  @include ctb-opacity(0.8);
 }
 
 // Base modal
@@ -39,7 +39,7 @@
   outline: none;
 
   &.fade {
-    @include ctb-transition('opacity .3s linear, top .3s ease-out');
+    @include ctb-transition(opacity .3s linear, top .3s ease-out);
     top: -25%;
   }
   &.fade.in { top: 10%; }
